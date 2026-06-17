@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Team Check | BeOx</title>
+  <meta name="description" content="AI Team Check BeOx: una prima fotografia digitale dello stato di salute del team.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="check-page">
+  <header class="site-header is-scrolled" data-header>
+    <a class="brand" href="index.html#home" aria-label="BeOx home">
+      <img src="assets/logo-beox-bianco.png" alt="BeOx">
+    </a>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-label="Apri menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" data-nav aria-label="Navigazione principale">
+      <a href="index.html#metodo">Metodo BeOx</a>
+      <a href="index.html#percorsi">Percorsi</a>
+      <a href="index.html#partner">Partner</a>
+      <a class="nav-cta" href="ai-team-check.html">AI Team Check</a>
+      <a href="index.html#contatti">Contatti</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="check-hero" aria-labelledby="check-title">
+      <div class="section-inner check-hero-layout">
+        <div>
+          <p class="eyebrow">Scopri lo stato di salute del tuo team</p>
+          <h1 id="check-title">Comprendi da dove partire per allenare il tuo team.</h1>
+          <p>Rispondi a 20 domande e ottieni una prima fotografia orientativa su coesione, comunicazione, responsabilita, conflittualita, stress, leadership e capacita di lavorare sotto pressione.</p>
+        </div>
+        <img src="assets/ai-check.jpg" alt="Dashboard digitale per la lettura dello stato del team">
+      </div>
+    </section>
+
+    <section class="section check-tool-section" aria-labelledby="check-form-title">
+      <div class="section-inner check-layout">
+        <form class="check-form check-form-wide" data-check-form>
+          <p class="eyebrow">Questionario guidato</p>
+          <h2 id="check-form-title">Prima fotografia dello stato di salute del team</h2>
+          <p class="form-intro">Il risultato non sostituisce l'analisi consulenziale BeOx, ma aiuta a individuare segnali, priorita e possibili aree di intervento.</p>
+
+          <div class="form-block">
+            <h3>Dati per ricevere il report</h3>
+            <div class="form-row two">
+              <label>Nome e cognome
+                <input type="text" name="fullName" placeholder="Nome e cognome" required>
+              </label>
+              <label>Email
+                <input type="email" name="email" placeholder="nome@azienda.it" required>
+              </label>
+            </div>
+            <div class="form-row two">
+              <label>Numero cellulare
+                <input type="tel" name="phone" placeholder="+39 ..." required>
+              </label>
+              <label>Nome azienda <span class="optional-label">facoltativo</span>
+                <input type="text" name="company" placeholder="Nome azienda">
+              </label>
+            </div>
+            <div class="form-row two">
+              <label>Citta <span class="optional-label">facoltativo</span>
+                <input type="text" name="city" placeholder="Citta">
+              </label>
+              <label>Ruolo
+                <select name="role" required>
+                  <option value="">Seleziona il tuo ruolo</option>
+                  <option value="HR / People & Culture">HR / People & Culture</option>
+                  <option value="Manager">Manager</option>
+                  <option value="Imprenditore">Imprenditore</option>
+                  <option value="Team leader">Team leader</option>
+                  <option value="Responsabile formazione">Responsabile formazione</option>
+                  <option value="Dipendente">Dipendente</option>
+                  <option value="Consulente esterno">Consulente esterno</option>
+                  <option value="Altro">Altro</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row two">
+              <label>Dimensione team
+                <select name="size" required>
+                  <option value="">Seleziona la dimensione</option>
+                  <option value="1-10 persone">1-10 persone</option>
+                  <option value="11-30 persone">11-30 persone</option>
+                  <option value="31-80 persone">31-80 persone</option>
+                  <option value="80+ persone">80+ persone</option>
+                </select>
+              </label>
+              <label>Area prioritaria percepita
+                <select name="priority" required>
+                  <option value="">Seleziona un'area</option>
+                  <option value="Comunicazione">Comunicazione</option>
+                  <option value="Collaborazione">Collaborazione</option>
+                  <option value="Leadership">Leadership</option>
+                  <option value="Stress e pressione">Stress e pressione</option>
+                  <option value="Conflittualita">Conflittualita</option>
+                  <option value="Motivazione">Motivazione</option>
+                  <option value="Non so ancora">Non so ancora</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="scale-guide" aria-label="Scala di valutazione">
+            <span>1 = criticita forte</span>
+            <span>5 = situazione intermedia</span>
+            <span>10 = punto di forza</span>
+          </div>
+
+          <div class="question-list question-list-extended">
+            <label class="range-question">Il team ha obiettivi chiari e condivisi?
+              <input type="range" name="alignment" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Le priorita operative sono comprese da tutti?
+              <input type="range" name="priorities" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">La comunicazione e diretta, utile e tempestiva?
+              <input type="range" name="communication" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Le informazioni importanti circolano senza blocchi o filtri inutili?
+              <input type="range" name="informationFlow" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">I conflitti vengono affrontati in modo costruttivo?
+              <input type="range" name="conflictManagement" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Nel team ci sono fiducia e sicurezza nel dire cio che non funziona?
+              <input type="range" name="trust" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Le persone si assumono responsabilita senza scaricare sugli altri?
+              <input type="range" name="responsibility" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Ruoli, confini e aspettative sono chiari?
+              <input type="range" name="roles" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">La leadership guida senza creare dipendenza o confusione?
+              <input type="range" name="leadership" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team sa seguire, supportare e dare feedback ai leader?
+              <input type="range" name="followership" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Tra reparti e funzioni c'e collaborazione reale?
+              <input type="range" name="collaboration" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team riesce a trasformare gli errori in apprendimento?
+              <input type="range" name="errorLearning" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il livello di stress e sostenibile nel tempo?
+              <input type="range" name="stress" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team regge pressione e imprevisti senza perdere lucidita?
+              <input type="range" name="pressure" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Le persone mantengono energia e motivazione anche nei periodi intensi?
+              <input type="range" name="energy" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team sa decidere con rapidita quando serve?
+              <input type="range" name="decisionMaking" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Gli accordi presi vengono rispettati nel lavoro quotidiano?
+              <input type="range" name="execution" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team riceve feedback utili e frequenti?
+              <input type="range" name="feedback" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team ha routine efficaci per migliorare nel tempo?
+              <input type="range" name="routines" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+            <label class="range-question">Il team e pronto ad allenarsi in modo pratico, esperienziale e misurabile?
+              <input type="range" name="readiness" min="1" max="10" value="5">
+              <span data-range-label>5/10 - Intermedio</span>
+            </label>
+          </div>
+
+          <button class="button button-primary" type="submit">Genera report <span aria-hidden="true">&rarr;</span></button>
+          <p class="form-note">Dopo l'invio si aprira una pagina report dedicata. Nella versione pubblicata il flusso potra inviare automaticamente dati e risposte alla tua email o al CRM.</p>
+        </form>
+
+        <aside class="check-side-panel">
+          <p class="result-label">Metodo BeOx</p>
+          <h3>Una lettura prima del percorso.</h3>
+          <p>Il Team Check mette in ordine i primi segnali: cosa e forte, cosa e fragile, dove intervenire prima e quale tipo di allenamento puo generare piu impatto.</p>
+          <div class="side-panel-list">
+            <span>20 indicatori</span>
+            <span>6 aree di salute del team</span>
+            <span>Report orientativo dedicato</span>
+            <span>Output pronto per follow-up commerciale</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <img src="assets/logo-beox-bianco.png" alt="BeOx">
+      <p>AI Team Check - prototipo BeOx.</p>
+      <a href="index.html#home">Torna al sito</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

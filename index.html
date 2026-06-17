@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BeOx | Metodo, sport e team ad alte prestazioni</title>
+  <meta name="description" content="Bozza del nuovo sito BeOx per consulenza e formazione esperienziale rivolta ai team aziendali.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-team-align" viewBox="0 0 64 64">
+      <circle cx="16" cy="20" r="6"/><circle cx="16" cy="44" r="6"/><circle cx="42" cy="32" r="7"/>
+      <path d="M22 20h10c5 0 8 3 8 8M22 44h10c5 0 8-3 8-8M44 32h12M51 25l7 7-7 7"/>
+    </symbol>
+    <symbol id="icon-pressure" viewBox="0 0 64 64">
+      <path d="M14 42a20 20 0 1 1 36 0"/><path d="M32 18v8M20 28l6 4M44 28l-6 4"/>
+      <path d="M18 46h28"/><path d="M32 34l10-12"/><circle cx="32" cy="34" r="4"/>
+    </symbol>
+    <symbol id="icon-leadership" viewBox="0 0 64 64">
+      <path d="M10 50h44"/><path d="M16 50V36h12v14M28 50V24h12v26M40 50V30h12v20"/>
+      <path d="M18 20l12-8 11 6 9-10"/><path d="M45 8h5v5"/>
+    </symbol>
+    <symbol id="icon-active-learning" viewBox="0 0 64 64">
+      <path d="M12 14h40v28H12z"/><path d="M20 24h14M20 32h10"/>
+      <path d="M39 27l5 5 8-10"/><path d="M24 50h16M32 42v8"/><path d="M50 44l4 4M12 48l4-4"/>
+    </symbol>
+    <symbol id="icon-listen" viewBox="0 0 64 64">
+      <path d="M40 43c-2 5-6 8-11 8-7 0-12-5-12-12V26c0-9 7-16 16-16s16 7 16 16"/>
+      <path d="M33 22c4 0 7 3 7 7s-3 7-7 7h-3"/><path d="M46 38h8M46 46h5"/>
+    </symbol>
+    <symbol id="icon-kpi" viewBox="0 0 64 64">
+      <circle cx="32" cy="28" r="18"/><circle cx="32" cy="28" r="9"/><circle cx="32" cy="28" r="2"/>
+      <path d="M32 10v8M32 38v8M14 28h8M42 28h8"/><path d="M16 54h36M20 48l8-8 7 5 11-13"/>
+    </symbol>
+    <symbol id="icon-workshop" viewBox="0 0 64 64">
+      <path d="M14 46h36"/><path d="M18 46V24l14-10 14 10v22"/><path d="M22 30h20M22 38h12"/>
+      <path d="M47 16l5-5M51 24h7M39 11V4"/>
+    </symbol>
+    <symbol id="icon-debrief" viewBox="0 0 64 64">
+      <path d="M10 14h34v24H24l-10 9v-9h-4z"/><path d="M24 45h22l8 7v-7h2V25H44"/>
+      <path d="M18 23h18M18 30h12"/>
+    </symbol>
+    <symbol id="icon-transfer" viewBox="0 0 64 64">
+      <path d="M10 34h26"/><path d="M30 26l8 8-8 8"/><path d="M42 16h12v34H42z"/>
+      <path d="M46 26h4M46 34h4M46 42h4"/><path d="M12 48h20"/>
+    </symbol>
+    <symbol id="icon-monitor" viewBox="0 0 64 64">
+      <path d="M10 50h36"/><path d="M14 44l10-12 8 7 13-19"/><circle cx="48" cy="22" r="9"/>
+      <path d="M55 29l7 7M10 14v36"/>
+    </symbol>
+    <symbol id="icon-sport-pressure" viewBox="0 0 64 64">
+      <circle cx="32" cy="34" r="20"/><path d="M25 8h14M32 14v8"/><path d="M32 34l9-11"/>
+      <path d="M22 42h20"/><path d="M17 18l-5-5M47 18l5-5"/>
+    </symbol>
+    <symbol id="icon-sport-error" viewBox="0 0 64 64">
+      <path d="M18 20a20 20 0 0 1 30 4"/><path d="M48 14v10H38"/><path d="M46 44a20 20 0 0 1-30-4"/>
+      <path d="M16 50V40h10"/><path d="M24 26l16 16M40 26L24 42"/>
+    </symbol>
+    <symbol id="icon-sport-roles" viewBox="0 0 64 64">
+      <path d="M14 20l10-8 8 6 8-6 10 8-5 11-7-4v25H26V27l-7 4z"/>
+      <path d="M28 31h8M28 39h8"/>
+    </symbol>
+    <symbol id="icon-sport-discipline" viewBox="0 0 64 64">
+      <path d="M18 52V14M46 52V14"/><path d="M18 20h28M18 30h28M18 40h28M18 50h28"/>
+      <path d="M26 14l6-6 6 6"/>
+    </symbol>
+    <symbol id="icon-sport-goal" viewBox="0 0 64 64">
+      <circle cx="30" cy="30" r="18"/><circle cx="30" cy="30" r="9"/><circle cx="30" cy="30" r="2"/>
+      <path d="M45 15l8-3-3 8"/><path d="M39 21l14-14"/><path d="M12 54h40"/>
+    </symbol>
+    <symbol id="icon-sport-team" viewBox="0 0 64 64">
+      <circle cx="32" cy="18" r="7"/><circle cx="16" cy="28" r="6"/><circle cx="48" cy="28" r="6"/>
+      <path d="M20 52c2-9 6-14 12-14s10 5 12 14"/><path d="M6 52c2-7 5-11 10-11 3 0 6 2 8 5"/>
+      <path d="M58 52c-2-7-5-11-10-11-3 0-6 2-8 5"/>
+    </symbol>
+  </svg>
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="BeOx home">
+      <img src="assets/logo-beox-bianco.png" alt="BeOx">
+    </a>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-label="Apri menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" data-nav aria-label="Navigazione principale">
+      <a href="#metodo">Metodo BeOx</a>
+      <a href="#percorsi">Percorsi</a>
+      <a href="#partner">Partner</a>
+      <a class="nav-cta" href="ai-team-check.html">AI Team Check</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Team aziendale impegnato in una sessione esperienziale sportiva"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Consulenza e formazione esperienziale per team aziendali</p>
+        <h1 id="hero-title">Il metodo BeOx per trasformare gruppi di lavoro in squadre ad alte prestazioni.</h1>
+        <p class="hero-text">Non formazione passiva, ma workshop, team working e metafora sportiva per allenare comportamenti concreti: collaborazione, leadership, responsabilita, gestione della pressione e performance.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="ai-team-check.html">Fai l'AI Team Check <span aria-hidden="true">&rarr;</span></a>
+          <a class="button button-secondary" href="#contatti">Raccontaci il tuo team</a>
+        </div>
+      </div>
+      <div class="hero-bottom" aria-label="Punti chiave BeOx">
+        <div>
+          <strong>Analisi prima del percorso</strong>
+          <span>Leggiamo bisogni, segnali e priorita del team.</span>
+        </div>
+        <div>
+          <strong>Sport come metodo</strong>
+          <span>Pressione, feedback, errore e obiettivi diventano apprendimento.</span>
+        </div>
+        <div>
+          <strong>Campioni + specialisti</strong>
+          <span>Esperienza vissuta, metodo formativo e trasferimento operativo.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problem-section" aria-labelledby="problemi-title">
+      <div class="section-inner">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Alleniamo dove gli altri formano</p>
+          <h2 id="problemi-title">La formazione non basta se non diventa comportamento.</h2>
+          <p>Molti team partecipano a corsi, eventi e attivita coinvolgenti. Il problema nasce dopo: quando energia, consapevolezza e buone intenzioni non diventano routine di lavoro.</p>
+        </div>
+        <div class="problem-grid">
+          <article>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-team-align"></use></svg>
+            </span>
+            <span>01</span>
+            <h3>Team poco allineati</h3>
+            <p>Obiettivi chiari sulla carta, ma priorita diverse, silos e collaborazione faticosa.</p>
+          </article>
+          <article>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-pressure"></use></svg>
+            </span>
+            <span>02</span>
+            <h3>Pressione e stress</h3>
+            <p>Team che reggono l'urgenza, ma perdono lucidita, energia e qualita delle relazioni.</p>
+          </article>
+          <article>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-leadership"></use></svg>
+            </span>
+            <span>03</span>
+            <h3>Leadership fragile</h3>
+            <p>Manager chiamati a guidare, motivare e responsabilizzare senza strumenti concreti.</p>
+          </article>
+          <article>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-active-learning"></use></svg>
+            </span>
+            <span>04</span>
+            <h3>Formazione passiva</h3>
+            <p>Concetti corretti, ma poco vissuti: manca il passaggio dalla teoria all'allenamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section diagnosis-section" id="analisi" aria-labelledby="analisi-title">
+      <div class="split section-inner">
+        <div class="media-panel">
+          <img src="assets/analisi.jpg" alt="Analisi e restituzione dei bisogni di un team aziendale">
+        </div>
+        <div class="copy-panel">
+          <p class="eyebrow">Stato di salute del team</p>
+          <h2 id="analisi-title">Prima leggiamo il team. Poi costruiamo il percorso.</h2>
+          <p>Una fotografia strutturata del team per capire dove intervenire: dinamiche relazionali, comunicazione, motivazione, gestione della pressione, responsabilita e segnali deboli che spesso non emergono nei percorsi formativi tradizionali.</p>
+          <ul class="check-list">
+            <li>Clima, collaborazione e qualita della comunicazione.</li>
+            <li>Leadership, responsabilita, motivazione e gestione della pressione.</li>
+            <li>Priorita di intervento, obiettivi e indicatori di cambiamento.</li>
+          </ul>
+          <a class="inline-link" href="ai-team-check.html">Parti da una prima fotografia digitale</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section difference-section" aria-labelledby="differenza-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">L'unicita BeOx</p>
+          <h2 id="differenza-title">Il campione porta l'esperienza vissuta. Il formatore la traduce. Il team la applica.</h2>
+        </div>
+        <div class="difference-layout">
+          <div class="quote-block">
+            <p>BeOx non usa lo sport come decorazione. Lo usa come metafora concreta di cio che accade ogni giorno in azienda: fiducia, ruoli, errore, pressione, disciplina, obiettivi, responsabilita e risultato.</p>
+          </div>
+          <div class="role-grid">
+            <article>
+              <img src="assets/campione.jpg" alt="Campione sportivo durante una sessione con un team">
+              <h3>Campioni</h3>
+              <p>Testimoni reali di mentalita, strategie e pressione vissute sulla propria pelle.</p>
+            </article>
+            <article>
+              <img src="assets/metodo.jpg" alt="Formatore che guida un debriefing con un team">
+              <h3>Formatori e specialisti</h3>
+              <p>Decodificano l'esperienza e la collegano alle dinamiche aziendali.</p>
+            </article>
+            <article>
+              <img src="assets/team-working.jpg" alt="Team aziendale in attivita collaborativa">
+              <h3>Team aziendali</h3>
+              <p>Allenano comportamenti osservabili da portare nel lavoro quotidiano.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method-section" id="metodo" aria-labelledby="metodo-title">
+      <div class="section-inner">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Metodo BeOx</p>
+          <h2 id="metodo-title">Non un evento. Un percorso che allena cambiamenti misurabili.</h2>
+          <p>Ogni intervento nasce da una lettura del team e viene costruito per trasferire l'esperienza in comportamenti concreti, osservabili e sostenibili.</p>
+        </div>
+        <div class="method-steps">
+          <article>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-listen"></use></svg>
+            </div>
+            <span>01</span>
+            <h3>Ascolto e analisi</h3>
+            <p>Analisi Stato di Salute del Team, bisogni, criticita, punti di forza e priorita.</p>
+          </article>
+          <article>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-kpi"></use></svg>
+            </div>
+            <span>02</span>
+            <h3>Obiettivi e KPI</h3>
+            <p>Definizione di obiettivi, destinatari, indicatori e struttura dell'intervento.</p>
+          </article>
+          <article>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-workshop"></use></svg>
+            </div>
+            <span>03</span>
+            <h3>Esperienza pratica</h3>
+            <p>Workshop, attivita sportive metaforiche, simulazioni, esercizi e feedback.</p>
+          </article>
+          <article>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-debrief"></use></svg>
+            </div>
+            <span>04</span>
+            <h3>Debriefing</h3>
+            <p>L'esperienza viene decodificata e collegata al lavoro quotidiano.</p>
+          </article>
+          <article>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-transfer"></use></svg>
+            </div>
+            <span>05</span>
+            <h3>Trasferimento</h3>
+            <p>Accordi di team, routine, responsabilita e strumenti applicabili subito.</p>
+          </article>
+          <article>
+            <div class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><use href="#icon-monitor"></use></svg>
+            </div>
+            <span>06</span>
+            <h3>Monitoraggio</h3>
+            <p>Follow-up e potenziamento per evitare l'effetto evento singolo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section partners-section" id="partner" aria-labelledby="partner-title">
+      <div class="section-inner">
+        <div class="section-heading narrow">
+          <h2 id="partner-title">Partner BeOx</h2>
+          <p>Alcune delle realta con cui collaboriamo.</p>
+        </div>
+      </div>
+      <div class="logo-marquee" aria-label="Loghi dei partner BeOx">
+        <div class="logo-track">
+          <div class="logo-set">
+            <span><img src="assets/partner-logos/partner-logo-01.png" alt="Logo partner BeOx 01"></span>
+            <span><img src="assets/partner-logos/partner-logo-02.png" alt="Logo partner BeOx 02"></span>
+            <span><img src="assets/partner-logos/partner-logo-03.png" alt="Logo partner BeOx 03"></span>
+            <span><img src="assets/partner-logos/partner-logo-04.png" alt="Logo partner BeOx 04"></span>
+            <span><img src="assets/partner-logos/partner-logo-05.png" alt="Logo partner BeOx 05"></span>
+            <span><img src="assets/partner-logos/partner-logo-06.png" alt="Logo partner BeOx 06"></span>
+            <span><img src="assets/partner-logos/partner-logo-07.png" alt="Logo partner BeOx 07"></span>
+            <span><img src="assets/partner-logos/partner-logo-08.png" alt="Logo partner BeOx 08"></span>
+            <span><img src="assets/partner-logos/partner-logo-09.png" alt="Logo partner BeOx 09"></span>
+            <span><img src="assets/partner-logos/partner-logo-10.png" alt="Logo partner BeOx 10"></span>
+            <span><img src="assets/partner-logos/partner-logo-11.png" alt="Logo partner BeOx 11"></span>
+            <span><img src="assets/partner-logos/partner-logo-12.png" alt="Logo partner BeOx 12"></span>
+            <span><img src="assets/partner-logos/partner-logo-13.png" alt="Logo partner BeOx 13"></span>
+            <span><img src="assets/partner-logos/partner-logo-14.png" alt="Logo partner BeOx 14"></span>
+            <span><img src="assets/partner-logos/partner-logo-15.png" alt="Logo partner BeOx 15"></span>
+            <span><img src="assets/partner-logos/partner-logo-16.png" alt="Logo partner BeOx 16"></span>
+            <span><img src="assets/partner-logos/partner-logo-17.png" alt="Logo partner BeOx 17"></span>
+            <span><img src="assets/partner-logos/partner-logo-18.png" alt="Logo partner BeOx 18"></span>
+            <span><img src="assets/partner-logos/partner-logo-19.png" alt="Logo partner BeOx 19"></span>
+            <span><img src="assets/partner-logos/partner-logo-20.png" alt="Logo partner BeOx 20"></span>
+            <span><img src="assets/partner-logos/partner-logo-21.png" alt="Logo partner BeOx 21"></span>
+            <span><img src="assets/partner-logos/partner-logo-22.png" alt="Logo partner BeOx 22"></span>
+            <span><img src="assets/partner-logos/partner-logo-23.png" alt="Logo partner BeOx 23"></span>
+          </div>
+          <div class="logo-set" aria-hidden="true">
+            <span><img src="assets/partner-logos/partner-logo-01.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-02.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-03.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-04.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-05.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-06.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-07.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-08.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-09.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-10.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-11.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-12.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-13.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-14.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-15.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-16.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-17.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-18.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-19.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-20.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-21.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-22.png" alt=""></span>
+            <span><img src="assets/partner-logos/partner-logo-23.png" alt=""></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paths-section" id="percorsi" aria-labelledby="percorsi-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Percorsi specialistici per team</p>
+          <h2 id="percorsi-title">Sei aree di intervento, costruite sul bisogno reale del team.</h2>
+          <p>Non un catalogo di attivita, ma un sistema di percorsi che parte dallo Stato di Salute del Team e porta le persone ad allenare comportamenti concreti.</p>
+        </div>
+        <div class="paths-grid compact-paths six-paths">
+          <article class="path-card">
+            <img src="assets/team-building.jpg" alt="Team Building Formativi">
+            <div>
+              <span>01</span>
+              <h3>Team Building Formativi</h3>
+              <p>Esperienze pratiche per coesione, fiducia, comunicazione e responsabilita.</p>
+            </div>
+          </article>
+          <article class="path-card">
+            <img src="assets/team-working.jpg" alt="Team Working">
+            <div>
+              <span>02</span>
+              <h3>Team Working</h3>
+              <p>Ruoli, accordi, routine, feedback e collaborazione nel lavoro quotidiano.</p>
+            </div>
+          </article>
+          <article class="path-card">
+            <img src="assets/sport-academy.jpg" alt="Sport Academy">
+            <div>
+              <span>03</span>
+              <h3>Sport Academy</h3>
+              <p>Campioni e formatori su leadership, pressione, disciplina, resilienza e obiettivi.</p>
+            </div>
+          </article>
+          <article class="path-card">
+            <img src="assets/speech.jpg" alt="Speech in Azienda">
+            <div>
+              <span>04</span>
+              <h3>Speech in Azienda</h3>
+              <p>Interventi ad alto impatto per convention, kick-off ed eventi interni.</p>
+            </div>
+          </article>
+          <article class="path-card">
+            <img src="assets/sport-azienda.jpg" alt="Sport in Azienda">
+            <div>
+              <span>05</span>
+              <h3>Sport in Azienda</h3>
+              <p>Energia, concentrazione, prevenzione, gestione stress e performance psicofisica.</p>
+            </div>
+          </article>
+          <article class="path-card">
+            <img src="assets/autodifesa.jpg" alt="Autodifesa in Rosa">
+            <div>
+              <span>06</span>
+              <h3>Autodifesa in Rosa</h3>
+              <p>Sicurezza personale, autostima, assertivita, empowerment e parita di genere.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sport-section" aria-labelledby="sport-title">
+      <div class="section-inner sport-layout">
+        <div>
+          <p class="eyebrow">Perche la metafora sportiva funziona</p>
+          <h2 id="sport-title">Lo sport rende visibile cio che in azienda spesso resta implicito.</h2>
+        </div>
+        <div class="sport-points" aria-label="Elementi della metafora sportiva">
+          <div>
+            <span class="sport-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#icon-sport-pressure"></use></svg></span>
+            <strong>Pressione</strong><span>Allenare lucidita e decisione.</span>
+          </div>
+          <div>
+            <span class="sport-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#icon-sport-error"></use></svg></span>
+            <strong>Errore</strong><span>Trasformarlo in feedback e apprendimento.</span>
+          </div>
+          <div>
+            <span class="sport-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#icon-sport-roles"></use></svg></span>
+            <strong>Ruoli</strong><span>Fidarsi di leader, coach e compagni.</span>
+          </div>
+          <div>
+            <span class="sport-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#icon-sport-discipline"></use></svg></span>
+            <strong>Disciplina</strong><span>Collegare costanza e risultato.</span>
+          </div>
+          <div>
+            <span class="sport-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#icon-sport-goal"></use></svg></span>
+            <strong>Obiettivi</strong><span>Rendere chiara la direzione comune.</span>
+          </div>
+          <div>
+            <span class="sport-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#icon-sport-team"></use></svg></span>
+            <strong>Squadra</strong><span>Passare dall'io al noi operativo.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ai-check" aria-labelledby="ai-title">
+      <div class="section-inner ai-cta">
+        <div class="ai-cta-copy">
+          <p class="eyebrow">AI Team Check</p>
+          <h2 id="ai-title">Una prima fotografia digitale per capire da dove partire.</h2>
+          <p>Il check non sostituisce l'Analisi Stato di Salute del Team: aiuta HR, manager e imprenditori a leggere alcuni segnali e ad arrivare alla call con un bisogno piu chiaro.</p>
+          <a class="button button-primary" href="ai-team-check.html">Vai all'AI Team Check <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="ai-cta-media">
+          <img src="assets/ai-check.jpg" alt="Dashboard di analisi digitale del team">
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="section-inner">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Dentro l'esperienza</p>
+          <h2 id="gallery-title">Spazio fotografico per raccontare workshop, team e momenti sul campo.</h2>
+          <p>Le foto reali vengono trattate con un mood piu coerente al sito: neri profondi, luce calda, accenti arancio e una resa piu editoriale.</p>
+        </div>
+      </div>
+      <div class="gallery-marquee" aria-label="Galleria fotografica BeOx">
+        <div class="gallery-track">
+          <img src="assets/foto-reali-migliorate/beox-foto-01-web.jpg" alt="Foto evento BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-02-web.jpg" alt="Foto aula BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-03-web.jpg" alt="Foto formazione BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-04-web.jpg" alt="Foto gruppo BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-05-web.jpg" alt="Foto team BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-06-web.jpg" alt="Foto platea BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-07-web.jpg" alt="Foto gruppo sportivo BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-08-web.jpg" alt="Foto workshop BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-09-web.jpg" alt="Foto training BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-10-web.jpg" alt="Foto evento aziendale BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-11-web.jpg" alt="Foto pratica BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-12-web.jpg" alt="Foto attivita BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-13-web.jpg" alt="Foto esercizio BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-14-web.jpg" alt="Foto debrief BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-15-web.jpg" alt="Foto team sport azienda BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-16-web.jpg" alt="Foto speech BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-17-web.jpg" alt="Foto speaker BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-01-web.jpg" alt="Foto evento BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-02-web.jpg" alt="Foto aula BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-03-web.jpg" alt="Foto formazione BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-04-web.jpg" alt="Foto gruppo BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-05-web.jpg" alt="Foto team BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-06-web.jpg" alt="Foto platea BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-07-web.jpg" alt="Foto gruppo sportivo BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-08-web.jpg" alt="Foto workshop BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-09-web.jpg" alt="Foto training BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-10-web.jpg" alt="Foto evento aziendale BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-11-web.jpg" alt="Foto pratica BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-12-web.jpg" alt="Foto attivita BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-13-web.jpg" alt="Foto esercizio BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-14-web.jpg" alt="Foto debrief BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-15-web.jpg" alt="Foto team sport azienda BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-16-web.jpg" alt="Foto speech BeOx migliorata">
+          <img src="assets/foto-reali-migliorate/beox-foto-17-web.jpg" alt="Foto speaker BeOx migliorata">
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contatti" aria-labelledby="contatti-title">
+      <div class="section-inner contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">Contatti</p>
+          <h2 id="contatti-title">Raccontaci il tuo team.</h2>
+          <p>Puoi partire da una diagnosi, da un percorso formativo, da un evento con campione o da un bisogno ancora poco definito. Il primo obiettivo e capire dove intervenire.</p>
+          <div class="quick-choices" aria-label="Bisogni frequenti">
+            <span>Analisi del Team</span>
+            <span>Team Building</span>
+            <span>Team Working</span>
+            <span>Sport Academy</span>
+            <span>Speech</span>
+            <span>Sport in Azienda</span>
+          </div>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <div class="form-row two">
+            <label>Nome
+              <input type="text" name="name" placeholder="Nome e cognome" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" placeholder="nome@azienda.it" required>
+            </label>
+          </div>
+          <div class="form-row two">
+            <label>Azienda
+              <input type="text" name="company" placeholder="Nome azienda">
+            </label>
+            <label>Area di interesse
+              <select name="interest">
+                <option>AI Team Check</option>
+                <option>Analisi Stato di Salute del Team</option>
+                <option>Team Building Formativi</option>
+                <option>Team Working</option>
+                <option>Sport Academy / Speech</option>
+                <option>Sport in Azienda / Autodifesa in Rosa</option>
+              </select>
+            </label>
+          </div>
+          <label>Che cosa vuoi migliorare nel team?
+            <textarea name="message" rows="5" placeholder="Es. collaborazione tra reparti, comunicazione, gestione della pressione, engagement..."></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Invia richiesta <span aria-hidden="true">→</span></button>
+          <p class="form-note" data-contact-message></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <img src="assets/logo-beox-bianco.png" alt="BeOx">
+      <p>Bozza sito BeOx - consulenza, formazione esperienziale e metafora sportiva per team aziendali.</p>
+      <a href="#home">Torna su</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
