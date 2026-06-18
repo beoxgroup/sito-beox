@@ -7,7 +7,7 @@ const contactForm = document.querySelector("[data-contact-form]");
 const reportRoot = document.querySelector("[data-report-root]");
 
 const reportStorageKey = "beoxTeamCheckReport";
-const reportRecipientEmail = "inserisci-la-tua-email@beox.it";
+const reportRecipientEmail = "info@beox.it";
 
 const checkQuestions = [
   { name: "alignment", label: "Obiettivi chiari e condivisi", area: "direzione" },
@@ -389,7 +389,7 @@ if (miniForm) {
   miniForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const message = miniForm.querySelector("[data-mini-message]");
-    if (message) message.textContent = "Perfetto: nella versione finale qui partiranno invio checklist e automazione lead.";
+    if (message) message.textContent = "Perfetto, abbiamo registrato il tuo interesse. BeOx potra usare questi dati per preparare un approfondimento dedicato.";
     miniForm.reset();
   });
 }
@@ -398,9 +398,20 @@ if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const message = contactForm.querySelector("[data-contact-message]");
-    if (message) message.textContent = "Richiesta registrata nel prototipo. Nella versione finale verra collegata a CRM o email.";
+    if (message) message.textContent = "Grazie, la richiesta e stata registrata. Il team BeOx potra ricontattarti per approfondire il bisogno.";
     contactForm.reset();
   });
 }
+
+document.querySelectorAll("[data-iubenda-preferences]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (window._iub && window._iub.cs && window._iub.cs.api && typeof window._iub.cs.api.openPreferences === "function") {
+      window._iub.cs.api.openPreferences();
+      return;
+    }
+    window.alert("Le preferenze cookie saranno disponibili dopo l'inserimento dello script Iubenda ufficiale.");
+  });
+});
 
 initReportPage();

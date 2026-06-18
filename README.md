@@ -1,25 +1,21 @@
-# Bozza sito BeOx
+# Sito BeOx
 
-Questa cartella contiene una prima bozza navigabile del nuovo sito BeOx.
-
-## Come aprirla
-
-Aprire `index.html` con il browser.
+Sito istituzionale per l'area consulenza e formazione esperienziale BeOx rivolta ai team aziendali.
 
 ## Struttura
 
-- Hero con promessa e posizionamento.
-- Problemi dei team.
-- Analisi Stato di Salute del Team come filo conduttore.
-- Differenza BeOx: campioni, formatori, specialisti e team aziendali.
-- Metodo BeOx.
-- Sei percorsi principali con immagini compatte.
-- Metafora sportiva.
-- Galleria fotografica scorrevole con foto reali migliorate e copiate in `assets/foto-reali-migliorate`.
-- AI Team Check su pagina dedicata.
-- Fascia partner con loghi placeholder.
-- Contatti.
+- Homepage con posizionamento, Sistema BeOx, metodo PEX, partner, percorsi, AI Team Check, Osservatorio e contatti.
+- Pagina AI Team Check per una prima lettura digitale dello stato di salute del team.
+- Pagina report generata dal Team Check.
+- Pagina Osservatorio per articoli, case history e contenuti SEO su leadership, team building, comunicazione, stress, performance e metafora sportiva.
 
-## Nota sugli asset
+## Asset
 
-Le fotografie usate sono placeholder AI realistici. Non rappresentano eventi reali BeOx e vanno sostituite con foto vere appena disponibili.
+Le immagini e i loghi sono organizzati nella cartella `assets`.
+I loghi partner sono in `assets/partner-logos`.
+Le foto evento sono in `assets/foto-reali-migliorate`.
+
+## Note operative
+
+Il sito e statico e puo essere pubblicato su GitHub Pages.
+Per l'invio reale dei moduli sara necessario collegare un servizio email, CRM o automazione dedicata.

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Team Check | BeOx</title>
-  <meta name="description" content="AI Team Check BeOx: una prima fotografia digitale dello stato di salute del team.">
+  <title>AI Team Check BeOx | Stato di salute del team aziendale</title>
+  <meta name="description" content="Compila l'AI Team Check BeOx e ottieni una prima lettura dello stato di salute del team: comunicazione, leadership, stress e performance.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="check-page">
@@ -18,11 +18,16 @@
       <span></span>
     </button>
     <nav class="main-nav" data-nav aria-label="Navigazione principale">
-      <a href="index.html#metodo">Metodo BeOx</a>
+      <a href="index.html#sistema">Sistema BeOx</a>
+      <a href="index.html#metodo">Metodo</a>
       <a href="index.html#percorsi">Percorsi</a>
       <a href="index.html#partner">Partner</a>
+      <a href="osservatorio.html">Osservatorio</a>
       <a class="nav-cta" href="ai-team-check.html">AI Team Check</a>
       <a href="index.html#contatti">Contatti</a>
+      <a class="whatsapp-nav" href="https://wa.me/393485907515?text=Ciao%20BeOx%2C%20vorrei%20ricevere%20informazioni%20sui%20vostri%20percorsi%20per%20team%20aziendali." target="_blank" rel="noopener" aria-label="Scrivi a BeOx su WhatsApp">
+        <span aria-hidden="true">☎</span> WhatsApp
+      </a>
     </nav>
   </header>
 
@@ -104,6 +109,11 @@
                 </select>
               </label>
             </div>
+          </div>
+
+          <div class="privacy-box">
+            <h3>Privacy e uso del report</h3>
+            <p>I dati inseriti vengono utilizzati per generare il report orientativo e per permettere a BeOx di approfondire la richiesta. Il report non produce decisioni automatiche vincolanti e non sostituisce un'analisi consulenziale dedicata.</p>
           </div>
 
           <div class="scale-guide" aria-label="Scala di valutazione">
@@ -195,8 +205,12 @@
             </label>
           </div>
 
+          <label class="checkbox-field">
+            <input type="checkbox" name="privacyConsent" required>
+            <span>Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei dati per generare il report orientativo AI Team Check ed essere ricontattato da BeOx.</span>
+          </label>
           <button class="button button-primary" type="submit">Genera report <span aria-hidden="true">&rarr;</span></button>
-          <p class="form-note">Dopo l'invio si aprira una pagina report dedicata. Nella versione pubblicata il flusso potra inviare automaticamente dati e risposte alla tua email o al CRM.</p>
+          <p class="form-note">Dopo l'invio si aprira una pagina report dedicata con una prima lettura delle aree da allenare e delle priorita di intervento.</p>
         </form>
 
         <aside class="check-side-panel">
@@ -207,7 +221,7 @@
             <span>20 indicatori</span>
             <span>6 aree di salute del team</span>
             <span>Report orientativo dedicato</span>
-            <span>Output pronto per follow-up commerciale</span>
+            <span>Output utile per una call di approfondimento</span>
           </div>
         </aside>
       </div>
@@ -217,7 +231,10 @@
   <footer class="site-footer">
     <div class="section-inner footer-inner">
       <img src="assets/logo-beox-bianco.png" alt="BeOx">
-      <p>AI Team Check - prototipo BeOx.</p>
+      <div class="footer-company">
+        <p>AI Team Check BeOx - prima lettura digitale dello stato di salute del team.</p>
+        <p class="footer-legal-links"><a href="privacy.html">Privacy Policy</a> <span>|</span> <a href="cookie-policy.html">Cookie Policy</a> <span>|</span> <a href="#" data-iubenda-preferences>Preferenze cookie</a></p>
+      </div>
       <a href="index.html#home">Torna al sito</a>
     </div>
   </footer>
