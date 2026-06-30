@@ -1,0 +1,32 @@
+name: Deploy sito BeOx su hosting Register
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Pubblica su beoxgroup.it
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Scarica repository
+        uses: actions/checkout@v4
+
+      - name: Carica sito su hosting Register
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.REGISTER_FTP_SERVER }}
+          username: ${{ secrets.REGISTER_FTP_USERNAME }}
+          password: ${{ secrets.REGISTER_FTP_PASSWORD }}
+          protocol: ${{ vars.REGISTER_FTP_PROTOCOL || 'ftp' }}
+          port: ${{ vars.REGISTER_FTP_PORT || 21 }}
+          local-dir: ./
+          server-dir: ${{ vars.REGISTER_FTP_SERVER_DIR || '/' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
