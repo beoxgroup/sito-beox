@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /team-check-report/
+Disallow: /team-check-report.html
+Disallow: /qa/
+
+Sitemap: https://www.beoxgroup.it/sitemap.xml
