@@ -10,23 +10,53 @@ jobs:
   deploy:
     name: Pubblica su beoxgroup.it
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - name: Scarica repository
-        uses: actions/checkout@v4
+      - name: Prepara file del sito
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir site
+          curl -L \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/tarball/${GITHUB_SHA}" \
+            | tar -xz --strip-components=1 -C site
+
+      - name: Installa client FTP
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
 
       - name: Carica sito su hosting Register
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.REGISTER_FTP_SERVER }}
-          username: ${{ secrets.REGISTER_FTP_USERNAME }}
-          password: ${{ secrets.REGISTER_FTP_PASSWORD }}
-          protocol: ${{ vars.REGISTER_FTP_PROTOCOL || 'ftp' }}
-          port: ${{ vars.REGISTER_FTP_PORT || 21 }}
-          local-dir: ./
-          server-dir: ${{ vars.REGISTER_FTP_SERVER_DIR || '/' }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .github/**
-            README.md
+        env:
+          FTP_SERVER: ${{ secrets.REGISTER_FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.REGISTER_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.REGISTER_FTP_PASSWORD }}
+          FTP_PROTOCOL: ${{ vars.REGISTER_FTP_PROTOCOL || 'ftp' }}
+          FTP_PORT: ${{ vars.REGISTER_FTP_PORT || '21' }}
+          FTP_SERVER_DIR: ${{ vars.REGISTER_FTP_SERVER_DIR || '/' }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$FTP_SERVER" ] || [ -z "$FTP_USERNAME" ] || [ -z "$FTP_PASSWORD" ]; then
+            echo "::error::Configura i secrets REGISTER_FTP_SERVER, REGISTER_FTP_USERNAME e REGISTER_FTP_PASSWORD."
+            exit 1
+          fi
+
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" -p "$FTP_PORT" "$FTP_PROTOCOL://$FTP_SERVER" <<EOF
+          set ftp:ssl-allow true
+          set ssl:verify-certificate no
+          set net:timeout 30
+          set net:max-retries 3
+          mirror --reverse --verbose \
+            --exclude-glob .git/** \
+            --exclude-glob .github/** \
+            --exclude-glob README.md \
+            --exclude-glob qa/** \
+            site/ "$FTP_SERVER_DIR"
+          bye
+          EOF
